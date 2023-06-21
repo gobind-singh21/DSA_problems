@@ -31,7 +31,6 @@ void solve(vector<string> &board, vector<vector<string>> &answer, int column,
             upperRow[column] = false;
             secondaryDiagonal[i + column] = false;
             primaryDiagonal[n - 1 + column - i] = false;
-
         }
     }
 }
