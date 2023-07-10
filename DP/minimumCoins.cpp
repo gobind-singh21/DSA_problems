@@ -21,6 +21,10 @@ int numberOfElements(vector<int> &nums, int index, int target, vector<vector<int
 int minimumElements(vector<int> &nums, int x) {
     int n = nums.size();
     vector<vector<int>> dp(n, vector<int>(x + 1, -1));
+    // for(int i = 0; i < n; i++) {
+    //     dp[i][0] = 0;
+    // }
+    
     int ans = numberOfElements(nums, n - 1, x, dp);
     if(ans >= 1e9)
         return -1;
