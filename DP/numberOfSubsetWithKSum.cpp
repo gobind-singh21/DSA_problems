@@ -3,6 +3,7 @@
 
 using namespace std;
 
+int mod = 1e9 + 7;
 int countWays(vector<int> &arr, int target, int index, vector<vector<int>> &dp) {
     if(index == 0) {
         if(target == 0 && arr[0] == 0)
@@ -15,7 +16,7 @@ int countWays(vector<int> &arr, int target, int index, vector<vector<int>> &dp) 
         return dp[index][target];
     int pick = (arr[index] <= target) ? countWays(arr, target - arr[index], index - 1, dp) : 0;
     int nonPick = countWays(arr, target, index - 1, dp);
-    return dp[index][target] = pick + nonPick;
+    return dp[index][target] = (pick + nonPick) % mod;
 }
 
 int findWays(vector<int> &arr, int tar) {
