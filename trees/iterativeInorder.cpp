@@ -5,10 +5,10 @@
 
 using namespace std;
 
-vector<int> inorder(Node* root) {
-    stack<Node*> st;
+vector<int> inorder(TreeNode* root) {
+    stack<TreeNode*> st;
     vector<int> ans(0);
-    Node* node = root;
+    TreeNode* node = root;
     while(true) {
         if(node) {
             st.push(node);

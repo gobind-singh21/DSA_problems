@@ -1,13 +1,13 @@
-struct Node {
+struct TreeNode {
     int val;
-    Node* right;
-    Node* left;
-    Node(int x) {
+    TreeNode* right;
+    TreeNode* left;
+    TreeNode(int x) {
         val = x;
         left = nullptr;
         right = nullptr;
     }
-    Node(int x, Node* leftNode, Node* rightNode) {
+    TreeNode(int x, TreeNode* leftNode, TreeNode* rightNode) {
         val = x;
         left = leftNode;
         right = rightNode;

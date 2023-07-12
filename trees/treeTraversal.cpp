@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void preorderTraversal(Node* root) {
+void preorderTraversal(TreeNode* root) {
     if(!root)
         return;
     cout << root->val << ' ';
@@ -11,7 +11,7 @@ void preorderTraversal(Node* root) {
     preorderTraversal(root->right);
 }
 
-void postOrderTraversal(Node* root) {
+void postOrderTraversal(TreeNode* root) {
     if(!root)
         return;
     postOrderTraversal(root->left);
@@ -19,7 +19,7 @@ void postOrderTraversal(Node* root) {
     cout << root->val << ' ';
 }
 
-void inorderTraversal(Node* root) {
+void inorderTraversal(TreeNode* root) {
     if(!root)
         return;
     inorderTraversal(root->left);

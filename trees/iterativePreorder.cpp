@@ -5,14 +5,14 @@
 
 using namespace std;
 
-vector<int> preorder(Node* root) {
+vector<int> preorder(TreeNode* root) {
     if(!root)
         return {};
     vector<int> ans(0);
-    stack<Node*> st;
+    stack<TreeNode*> st;
     st.push(root);
     while(!st.empty()) {
-        Node* temp = st.top();
+        TreeNode* temp = st.top();
         ans.push_back(temp->val);
         st.pop();
         if(temp->right)
@@ -30,11 +30,11 @@ void printVector(vector<int> arr) {
 }
 
 int main() {
-    Node* node1 = new Node(1);
-    Node* node2 = new Node(2);
-    Node* node3 = new Node(3);
-    Node* node4 = new Node(4);
-    Node* node5 = new Node(5);
+    TreeNode* node1 = new TreeNode(1);
+    TreeNode* node2 = new TreeNode(2);
+    TreeNode* node3 = new TreeNode(3);
+    TreeNode* node4 = new TreeNode(4);
+    TreeNode* node5 = new TreeNode(5);
     node1->left = node2;
     node1->right = node3;
     node2->right = node4;

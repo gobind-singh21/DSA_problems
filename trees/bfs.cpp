@@ -4,15 +4,15 @@
 
 using namespace std;
 
-vector<vector<int>> bfs(Node* root) {
+vector<vector<int>> bfs(TreeNode* root) {
     vector<vector<int>> ans(0);
-    queue<Node*> q;
+    queue<TreeNode*> q;
     q.push(root);
     while(!q.empty()) {
         int size = q.size();
         vector<int> level(0);
         for(int i = 0; i < size; i++) {
-            Node* temp = q.front();
+            TreeNode* temp = q.front();
             q.pop();
             if(temp->left)
                 q.push(temp->left);
