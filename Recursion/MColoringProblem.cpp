@@ -15,7 +15,7 @@ bool isPossible(vector<vector<int>> adjList, vector<int> color, int Color, int n
 bool colorCombination(vector<vector<int>> adjList, int m, int currNode, vector<int> color) {
     if(currNode == adjList.size())
         return true;
-    int n = adjList[currNode].size();
+    // int n = adjList[currNode].size();
     for(int i = 0; i < m; i++) {
         if(isPossible(adjList, color, i, currNode)) {
             color[currNode] = i;
