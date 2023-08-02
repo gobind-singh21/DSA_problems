@@ -14,7 +14,7 @@ public:
             adjList[v].push_back({u, time});
         }
         vector<long long> ways(n, 0);
-        vector<long long> dist(n, INT_MAX);
+        vector<long long> dist(n, LLONG_MAX);
         dist[0] = 0;
         ways[0] = 1;
         priority_queue<pair<long long, long long>, vector<pair<long long, long long>>, greater<pair<long long, long long>>> pq;
