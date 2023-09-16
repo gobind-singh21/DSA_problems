@@ -55,7 +55,7 @@ public:
 
 // Method 2
 class Solution1 {
-    
+        
 };
 int main() {
     return 0;
