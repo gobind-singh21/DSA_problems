@@ -4,7 +4,7 @@ using namespace std;
 
 vector<int> printingLongestIncreasingSubsequence(vector<int> arr, int n) {
     vector<int> dp(n, 1), hash(n);
-    int maxi = 1, lastIndex;
+    int maxi = 1, lastIndex = 0;
     for(int i = 1; i < n; i++) {
         hash[i] = i;
         for(int prev = 0; prev < i; prev++) {
@@ -17,7 +17,7 @@ vector<int> printingLongestIncreasingSubsequence(vector<int> arr, int n) {
             lastIndex = i;
             maxi = dp[i];
         }
-    }
+    }   
     vector<int> ans(maxi);
     int index = maxi - 1;
     while(hash[lastIndex] != lastIndex) {
@@ -25,6 +25,7 @@ vector<int> printingLongestIncreasingSubsequence(vector<int> arr, int n) {
         lastIndex = hash[lastIndex];
         index--;
     }
+    ans[0] = arr[lastIndex];
     return ans;
 }
 
@@ -35,7 +36,7 @@ void printVector(vector<int> arr) {
 }
 
 int main() {
-    vector<int> arr = {5, 4, 11, 1, 16, 8};
+    vector<int> arr = {1};
     printVector(printingLongestIncreasingSubsequence(arr, arr.size()));
     return 0;
 }
