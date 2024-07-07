@@ -30,7 +30,7 @@ void permutation(vector<int> &integers, vector<vector<int>> &answer, vector<bool
 
 int main() {
     vector<vector<int>> answer(0);
-    vector<int> integers = {1,2,3};
+    vector<int> integers = {1,2,4};
     vector<bool> visited(integers.size(), false);
     permutation(integers, answer, visited);
     printMatrix(answer);
