@@ -31,6 +31,20 @@ public:
             }
         }
     }
+
+    // optimal
+    // time complexity : O()
+    // space complexity : O()
+    void setZeroesOptimal(vector<vector<int>> &matrix) {
+        int n = matrix.size(), m = matrix[0].size();
+        int col0 = 1;
+        for (int i = 1; i < n; i++) {
+            for(int j = 1; j < m; j++) {
+                
+            }
+        }
+        
+    }
 };
 
 int main() {

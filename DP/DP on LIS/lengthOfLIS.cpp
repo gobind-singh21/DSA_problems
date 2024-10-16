@@ -55,6 +55,27 @@ public:
     }
 };
 
+// Method 3
+// using binary search
+// time complexity : O(N logN)
+// space complexity : O(N)
+class Solution2 {
+public:
+    int lengthOfLIS(vector<int> &nums) {
+        vector<int> ans(0);
+        ans.push_back(nums[0]);
+        for(int &i : nums) {
+            if(i > ans.back())
+                ans.push_back(i);
+            else {
+                int low = lower_bound(ans.begin(), ans.end(), i) - ans.begin();
+                ans[low] = i;
+            }
+        }
+        return ans.size();
+    }
+};
+
 int main() {
     return 0;
 }
