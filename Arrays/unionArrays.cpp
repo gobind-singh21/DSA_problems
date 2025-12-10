@@ -25,6 +25,7 @@ vector <int> sortedArray(vector <int> a, vector <int> b) {
 vector<int> sortedArray1(vector<int> a, vector<int> b) {
     int i = 0, j = 0, n1 = a.size(), n2 = b.size();
     vector<int> ans;
+    ans.reserve(n1 + n2);
     while(i < n1 && j < n2) {
         if(a[i] <= b[j]) {
             if(ans.size() == 0 || ans.back() != a[i])
